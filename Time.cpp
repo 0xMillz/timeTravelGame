@@ -18,6 +18,9 @@ void Time::setPtrs(Time *one, Time *two, Time *three, Time *four, Time *five)
 //This function halts the program until the users presses enter   
 void Time::EnterToContinue()
 {
+  for (int seconds = 3; seconds>0; --seconds) {
+          std::this_thread::sleep_for (std::chrono::seconds(seconds));
+      }
   cout << "Press ENTER to continue... " << endl;
   cin.ignore(std::numeric_limits <std::streamsize> ::max(), '\n' );  
 }
